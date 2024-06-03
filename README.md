@@ -1,0 +1,1 @@
+# AbstarctFactory_lab2
