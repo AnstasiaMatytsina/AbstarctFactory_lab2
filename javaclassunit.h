@@ -1,8 +1,8 @@
 #ifndef JAVACLASSUNIT_H
 #define JAVACLASSUNIT_H
+#include "classunit.h"
 
-
-class JavaClassUnit
+class JavaClassUnit: public ClassUnit
 {
 public:
     JavaClassUnit();

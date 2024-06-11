@@ -1,8 +1,8 @@
 #ifndef CSHARPMETHODUNIT_H
 #define CSHARPMETHODUNIT_H
+#include <methodunit.h>
 
-
-class CSharpMethodUnit
+class CSharpMethodUnit: public MethodUnit
 {
 public:
     CSharpMethodUnit();

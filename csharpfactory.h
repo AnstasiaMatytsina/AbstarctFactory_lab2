@@ -1,8 +1,8 @@
 #ifndef CSHARPFACTORY_H
 #define CSHARPFACTORY_H
+#include "factory.h"
 
-
-class CSharpFactory
+class CSharpFactory:public Factory
 {
 public:
     CSharpFactory();

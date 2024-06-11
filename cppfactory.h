@@ -1,8 +1,8 @@
 #ifndef CPPFACTORY_H
 #define CPPFACTORY_H
+#include "factory.h"
 
-
-class CppFactory
+class CppFactory:public Factory
 {
 public:
     CppFactory();

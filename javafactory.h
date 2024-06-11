@@ -1,8 +1,8 @@
 #ifndef JAVAFACTORY_H
 #define JAVAFACTORY_H
+#include "factory.h"
 
-
-class JavaFactory
+class JavaFactory:public Factory
 {
 public:
     JavaFactory();
