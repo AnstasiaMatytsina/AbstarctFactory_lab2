@@ -1,10 +1,10 @@
 #include "cppmethodunit.h"
 
-void MethodUnit::add(const std::shared_ptr<Unit> &unit, Flags) {
+void CppMethodUnit::add(const std::shared_ptr<Unit> &unit, Flags) {
     m_body.push_back( unit );
 }
 
-std::string MethodUnit::compile(unsigned int level) const {
+std::string CppMethodUnit::compile(unsigned int level) const {
     std::string result = generateShift( level );
     if( m_flags & STATIC ) {
         result += "static ";
