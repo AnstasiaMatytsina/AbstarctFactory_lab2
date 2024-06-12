@@ -1,5 +1,12 @@
 #include "cppmethodunit.h"
 
+
+CppMethodUnit::CppMethodUnit(const std::string &n, const std::string &t, Flags) :m_name( name ), m_returnType( returnType ), m_flags( flags ) {
+    m_name = n;
+    m_returnType = t;
+    m_flags = f;
+}
+
 void CppMethodUnit::add(const std::shared_ptr<Unit> &unit, Flags) {
     m_body.push_back( unit );
 }

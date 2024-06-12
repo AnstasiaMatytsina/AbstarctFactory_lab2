@@ -2,10 +2,12 @@
 #define CSHARPMETHODUNIT_H
 #include <methodunit.h>
 
-class CSharpMethodUnit: public MethodUnit
+class CSharpClassUnit : public ClassUnit
 {
 public:
-    CSharpMethodUnit();
+    explicit CSharpClassUnit(const std::string& name);
+    void add(const UnitPtr& unit, Flags flags) override;
+    std::string compile(unsigned int level = 0) const override;
 };
 
 #endif // CSHARPMETHODUNIT_H
