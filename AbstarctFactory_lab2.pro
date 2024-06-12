@@ -29,7 +29,10 @@ SOURCES += main.cpp \
     factory.cpp \
     cppfactory.cpp \
     javafactory.cpp \
-    csharpfactory.cpp
+    csharpfactory.cpp \
+    javaprintoperatorunit.cpp \
+    csharpprintoperatorunit.cpp \
+    cppprintoperatorunit.cpp
 
 HEADERS += \
     myclass.h \
@@ -46,4 +49,7 @@ HEADERS += \
     factory.h \
     cppfactory.h \
     javafactory.h \
-    csharpfactory.h
+    csharpfactory.h \
+    javaprintoperatorunit.h \
+    csharpprintoperatorunit.h \
+    cppprintoperatorunit.h
