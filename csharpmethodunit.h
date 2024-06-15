@@ -1,6 +1,7 @@
 #ifndef CSHARPMETHODUNIT_H
 #define CSHARPMETHODUNIT_H
 #include <methodunit.h>
+#include "classunit.h"
 
 class CSharpClassUnit : public ClassUnit
 {
