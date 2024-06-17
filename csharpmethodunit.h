@@ -6,7 +6,8 @@
 class CSharpClassUnit : public ClassUnit
 {
 public:
-    explicit CSharpClassUnit(const std::string& name);
+    CSharpClassUnit(const std::string& name, const std::string& returnType, const Flags& flags):
+            MethodUnit( name, returnType, flags ) {}
     void add(const UnitPtr& unit, Flags flags) override;
     std::string compile(unsigned int level = 0) const override;
 };

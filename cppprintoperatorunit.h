@@ -6,7 +6,7 @@ class CppPrintOperatorUnit : public PrintOperatorUnit
 {
 public:
     explicit PrintOperatorUnit( const std::string& text ) : m_text( text ) { }
-    std::string compile( unsigned int level = 0 ) const {}
+    std::string compile( unsigned int level = 0 ) const override;
 private:
     std::string m_text;
 
