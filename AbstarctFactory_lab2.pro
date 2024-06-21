@@ -1,3 +1,4 @@
+QT += core
 QT -= gui
 
 CONFIG += c++11 console
@@ -15,7 +16,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += main.cpp \
-    myclass.cpp \
     unit.cpp \
     classunit.cpp \
     methodunit.cpp \
@@ -35,7 +35,6 @@ SOURCES += main.cpp \
     cppprintoperatorunit.cpp
 
 HEADERS += \
-    myclass.h \
     unit.h \
     classunit.h \
     methodunit.h \

@@ -1,34 +1,15 @@
 #include "csharpclassunit.h"
-#include "csharpclassunit.h"
-CSharpClassUnit::CSharpClassUnit()
-{
 
-}
-
-void CSharpClassUnit::add(const std::shared_ptr<Unit> &unit, Flags flags){
-    int accessModifier = PRIVATE;
-
-    if(flags < ACCESS_MODIFIERS.size()) {
-        accessModifier = flags;
-    }
-    fields[accessModifier].push_back(unit);
-}
 
 std::string CSharpClassUnit::compile(unsigned int level) const {
-    std::string result = generateShift(level) + "class " + className + " {\n";
-
-    for(size_t i = 0; i < ACCESS_MODIFIERS.size(); i++) {
-        if (fields[i].empty()) {
-            continue;
-        }
-        for(const auto& field : fields[i]) {
-            result += generateShift(level+1);
-            result += ACCESS_MODIFIERS[i];
-            result += " ";
-            result += field->compile(level);
-            result += "\n";
-        }
+    std::string result = generateShift(level) + "class " + _name + " {\n";                          // производим генерацию класса
+    for( size_t i = 0; i < ACCESS_MODIFIERS.size(); ++i ){                                          // проходимся по всем полям модификаторов
+        if (_fields[i].empty())                                                                     // если в поле модификатора нет юнитов,
+            continue;                                                                               // то переходим на следующую итерацию
+        for (const auto& it : _fields[i])                                                           // проходимся по всем юнитам в поле модификатора
+            result += generateShift(level+1) + ACCESS_MODIFIERS[i] + " " + it -> compile(level+1);  // и генерируем юниты, потом добавляем их
+        result += '\n';
     }
-    result += generateShift(level) + "};\n";
-    return result;
+    result += generateShift(level) + "};\n"; // добавляем нужные отступы
+    return result;// возвращаем результат
 }

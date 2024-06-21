@@ -1,6 +1,5 @@
 #include "csharpprintoperatorunit.h"
 
-CSharpPrintOperatorUnit::CSharpPrintOperatorUnit()
-{
-
+std::string CSharpPrintOperatorUnit::compile(unsigned int level) const {
+    return generateShift( level ) + "Console.WriteLine( \"" + _text + "\" );\n";
 }
